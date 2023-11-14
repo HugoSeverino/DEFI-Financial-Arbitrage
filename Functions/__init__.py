@@ -1,2 +1,2 @@
 from Functions.events import fetch_events
-from Functions.Fetch_events import fetch_uniswap_pairs
+from Functions.Fetch_pairs import fetch_pairs

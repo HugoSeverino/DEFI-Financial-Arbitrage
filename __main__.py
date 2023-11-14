@@ -1,4 +1,4 @@
-from Functions import fetch_uniswap_pairs
+from Functions import fetch_pairs
 from web3 import Web3
 import os
 from dotenv import load_dotenv
@@ -10,8 +10,14 @@ API_Keys = os.getenv('Infura_API')
 
 infura = f'https://mainnet.infura.io/v3/{API_Keys}' #Infura API
 #infura = 'http://localhost:8545' #ETH Local Node
-web3 = Web3(Web3.HTTPProvider(infura))
-fetch_uniswap_pairs(web3)
 
 
-#tes
+web3 = Web3(Web3.HTTPProvider(infura)) # Creating Web3 instance 
+
+latest_block_number = web3.eth.blockNumber #Get ETH Last Block Number
+
+uniswap_factory =  Web3.toChecksumAddress("0x1f98431c8ad98523631ae4a59f267346ea31f984")
+#fetch_pairs(web3,uniswap_factory,0,15000000)
+
+
+
