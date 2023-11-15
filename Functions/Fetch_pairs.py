@@ -3,7 +3,7 @@ from web3 import Web3
 from .events import fetch_events
 
 import json
-
+from .JsonFile_ABI_V3 import JsonFile_ABI_V3
 
 
 
@@ -11,9 +11,9 @@ import json
 def fetch_pairs(web3: Web3,Factory_adress: Web3.toChecksumAddress) -> None:
     
     
-    with open('JSON/Poolv3.json') as Poolv3: #Importing Poolv3 ABI structure
-        factory_abi = json.load(Poolv3)
-
+    
+    factory_abi = JsonFile_ABI_V3.ReturnJsonAsPythonReadable('JSON/Poolv3.json')
+    print(factory_abi)
     try: #Fetch Last Block on data and choosing it as beginning 
         with open('JSON/data.json') as Pool_List: 
             Pool_List = json.load(Pool_List)
