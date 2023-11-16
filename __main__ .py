@@ -19,7 +19,7 @@ web3 = Web3(Web3.HTTPProvider(infura)) # Creating Web3 instance
 uniswap_factory =  Web3.toChecksumAddress("0x1f98431c8ad98523631ae4a59f267346ea31f984")
 
 
-fetch_pairs(web3,uniswap_factory)
+fetch_pairs(web3,uniswap_factory,"Uniswap","V3")
 
 
 

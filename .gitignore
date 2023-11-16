@@ -1,2 +1,4 @@
 .env
 JSON/data.json
+JSON/UniswapV2.json
+JSON/UniswapV3.json

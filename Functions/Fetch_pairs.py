@@ -4,24 +4,18 @@ from .events import fetch_events
 
 import json
 from .JsonFile_ABI_V3 import JsonFile_ABI_V3
+from .JsonFile_Data_ListePools import JsonFile_Data_ListePools
 
 
 
-
-def fetch_pairs(web3: Web3,Factory_adress: Web3.toChecksumAddress) -> None:
+def fetch_pairs(web3: Web3,Factory_adress: Web3.toChecksumAddress,App,Version) -> None:
     
     
+    if Version == "V3":
+        factory_abi = JsonFile_ABI_V3.ReturnJsonAsPythonReadable('JSON/Poolv3.json') #Get Pools ABI
     
-    factory_abi = JsonFile_ABI_V3.ReturnJsonAsPythonReadable('JSON/Poolv3.json')
-    print(factory_abi)
-    try: #Fetch Last Block on data and choosing it as beginning 
-        with open('JSON/data.json') as Pool_List: 
-            Pool_List = json.load(Pool_List)
-            fromblock = Pool_List[-1]["block"]
-            print(f'Last block in database is {fromblock}')
-    
-    except:  #If files not exist, start from the beginning
-        fromblock = 0
+    if App == "Uniswap":
+        fromblock = JsonFile_Data_ListePools.ReturnLastItemBlock(f'JSON/{App}{Version}.json') #Get Last Item Block, Return 0 if no Json
     
     latest_block_number = web3.eth.blockNumber #Get ETH Last Block Number
 
@@ -61,14 +55,14 @@ def fetch_pairs(web3: Web3,Factory_adress: Web3.toChecksumAddress) -> None:
             #print(f'Adding pair {Pool_Infos}on Uniswap V3')
         #Opening Json, copy data, merge data, write json     
         try:
-            with open('JSON/data.json', 'r') as file:
+            with open(f'JSON/{App}{Version}.json', 'r') as file:
                 existing_data = json.load(file)
         except FileNotFoundError:
             existing_data = []
 
         combined_data = existing_data + data_list
 
-        with open('JSON/data.json', 'w') as file:
+        with open(f'JSON/{App}{Version}.json', 'w') as file:
             json.dump(combined_data, file, indent=2)
     
     
