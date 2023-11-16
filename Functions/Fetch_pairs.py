@@ -11,7 +11,7 @@ from .JsonFile_Data_ListePools import JsonFile_Data_ListePools
 
 def fetch_pairs(web3: Web3,Factory_adress: Web3.toChecksumAddress,App,Version) -> None:
     
-    
+    print(f'Looking for Pairs in {App}{Version}')
     if Version == "V3":
         factory_abi = JsonFile_ABI_V3.ReturnJsonAsPythonReadable(f'JSON/Pair{Version}.json') #Get Pools ABI
         KindofEvent = "PoolCreated"

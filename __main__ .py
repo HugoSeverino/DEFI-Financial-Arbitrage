@@ -19,10 +19,12 @@ web3 = Web3(Web3.HTTPProvider(infura)) # Creating Web3 instance
 UniswapV3_factory =  Web3.toChecksumAddress("0x1f98431c8ad98523631ae4a59f267346ea31f984")
 SushiswapV3_factory =  Web3.toChecksumAddress("0xbACEB8eC6b9355Dfc0269C18bac9d6E2Bdc29C4F")
 SushiswapV2_factory =  Web3.toChecksumAddress("0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac")
+UniswapV2_factory =  Web3.toChecksumAddress("0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f")
 
 fetch_pairs(web3,UniswapV3_factory,"Uniswap","V3")
 fetch_pairs(web3,SushiswapV3_factory,"Sushiswap","V3")
 fetch_pairs(web3,SushiswapV2_factory,"Sushiswap","V2")
+fetch_pairs(web3,UniswapV2_factory,"Uniswap","V2")
 
 
 
