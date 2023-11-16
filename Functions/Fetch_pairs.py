@@ -30,12 +30,12 @@ def fetch_pairs(web3: Web3,Factory_adress: Web3.toChecksumAddress,App,Version) -
     
     toblock = 0
 
-    while toblock < latest_block_number: #Slicing by 250k blocks to avoid Infura API limitation of 10k results
+    while toblock < latest_block_number: #Slicing by 50k blocks to avoid Infura API limitation of 10k results
 
-        if fromblock + 250000 > latest_block_number:
+        if fromblock + 50000 > latest_block_number:
             toblock = latest_block_number
         else:
-            toblock = fromblock + 250000
+            toblock = fromblock + 50000
         events = list(fetch_events(factory.events[KindofEvent], from_block=fromblock+1,to_block=toblock))
         print('Got', len(events), 'events',"fromblock",fromblock+1,"toblock",toblock)
 

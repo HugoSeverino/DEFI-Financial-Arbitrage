@@ -1,0 +1,89 @@
+from web3 import Web3
+from .events import fetch_events
+from .JsonFile_ABI_V3 import JsonFile_ABI_V3
+from .JsonFile_ABI_V2 import JsonFile_ABI_V2
+from .JsonFile_Data_ListePools import JsonFile_Data_ListePools
+
+class EventFetcher:
+    def __init__(self, web3: Web3, factory_address: Web3.toChecksumAddress, app, version):
+        self.web3 = web3
+        self.factory_address = factory_address
+        self.app = app
+        self.version = version
+        self.factory_abi = self.get_factory_abi()
+        self.kind_of_event = self.get_kind_of_event()
+        self.from_block = JsonFile_Data_ListePools.ReturnLastItemBlock(f'JSON/{self.app}{self.version}.json')
+        self.latest_block_number = self.web3.eth.blockNumber
+
+    def get_factory_abi(self):
+        if self.version == "V3":
+            return JsonFile_ABI_V3.ReturnJsonAsPythonReadable(f'JSON/Pair{self.version}.json')
+        elif self.version == "V2":
+            return JsonFile_ABI_V2.ReturnJsonAsPythonReadable(f'JSON/Pair{self.version}.json')
+        else:
+            raise ValueError("Invalid version")
+
+    def get_kind_of_event(self):
+        if self.version == "V3":
+            return "PoolCreated"
+        elif self.version == "V2":
+            return "PairCreated"
+        else:
+            raise ValueError("Invalid version")
+
+    def fetch_and_store_pairs(self):
+        print(f'Looking for Pairs in {self.app}{self.version}')
+        factory = self.web3.eth.contract(self.factory_address, abi=self.factory_abi)
+        to_block = 0
+
+        while to_block < self.latest_block_number:
+            if self.from_block + 250000 > self.latest_block_number:
+                to_block = self.latest_block_number
+            else:
+                to_block = self.from_block + 250000
+
+            events = list(fetch_events(factory.events[self.kind_of_event], from_block=self.from_block + 1, to_block=to_block))
+            print('Got', len(events), 'events', "fromblock", self.from_block + 1, "toblock", to_block)
+
+            self.from_block = to_block
+
+            data_list = []
+
+            for ev in events:
+                if self.version == "V3":
+                    pool_info = {
+                        "Pool": ev.args.pool,
+                        "Token_0": ev.args.token0,
+                        "Token_1": ev.args.token1,
+                        "fee": ev.args.fee,
+                        "block": ev.blockNumber,
+                    }
+                elif self.version == "V2":
+                    pool_info = {
+                        "Pool": ev.args.pair,
+                        "Token_0": ev.args.token0,
+                        "Token_1": ev.args.token1,
+                        "fee": 3000,
+                        "block": ev.blockNumber,
+                    }
+                else:
+                    raise ValueError("Invalid version")
+
+                data_list.append(pool_info)
+
+            try:
+                with open(f'JSON/{self.app}{self.version}.json', 'r') as file:
+                    existing_data = json.load(file)
+            except FileNotFoundError:
+                existing_data = []
+
+            combined_data = existing_data + data_list
+
+            with open(f'JSON/{self.app}{self.version}.json', 'w') as file:
+                json.dump(combined_data, file, indent=2)
+
+# Example usage:
+# web3_instance = Web3(...)  # Replace ... with your Web3 instance
+# factory_address = "0x..."  # Replace ... with your actual factory address
+# app_instance = EventFetcher(web3_instance, factory_address, "Uniswap", "V3")
+# app_instance.fetch_and_store_pairs()
