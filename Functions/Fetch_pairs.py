@@ -6,7 +6,7 @@ import json
 from .JsonFile_ABI_V3 import JsonFile_ABI_V3
 from .JsonFile_ABI_V2 import JsonFile_ABI_V2
 from .JsonFile_Data_ListePools import JsonFile_Data_ListePools
-
+from .EventFetcher import EventFetcher
 
 
 def fetch_pairs(web3: Web3,Factory_adress: Web3.toChecksumAddress,App,Version) -> None:
@@ -37,6 +37,7 @@ def fetch_pairs(web3: Web3,Factory_adress: Web3.toChecksumAddress,App,Version) -
         else:
             toblock = fromblock + 50000
         events = list(fetch_events(factory.events[KindofEvent], from_block=fromblock+1,to_block=toblock))
+        
         print('Got', len(events), 'events',"fromblock",fromblock+1,"toblock",toblock)
 
         fromblock = toblock
@@ -66,18 +67,10 @@ def fetch_pairs(web3: Web3,Factory_adress: Web3.toChecksumAddress,App,Version) -
             
             
             data_list.append(Pool_Infos)
-            #print(f'Adding pair {Pool_Infos}on Uniswap V3')
-        #Opening Json, copy data, merge data, write json     
-        try:
-            with open(f'JSON/{App}{Version}.json', 'r') as file:
-                existing_data = json.load(file)
-        except FileNotFoundError:
-            existing_data = []
-
-        combined_data = existing_data + data_list
-
-        with open(f'JSON/{App}{Version}.json', 'w') as file:
-            json.dump(combined_data, file, indent=2)
+            #print(f'Adding pair {Pool_Infos}on {App}{Version}')
+        
+        JsonFile_Data_ListePools.AddDatainJson(f'JSON/{App}{Version}.json',data_list)
+        
     
     
 

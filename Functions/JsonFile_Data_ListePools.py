@@ -23,3 +23,15 @@ class JsonFile_Data_ListePools(JsonFile_Data):
                 return Pool_List[-1]["block"]
         except:
             return 0
+    
+    def AddDatainJson(self,data):
+        try:
+            with open(self, 'r') as file:
+                existing_data = json.load(file)
+        except FileNotFoundError:
+            existing_data = []
+
+        combined_data = existing_data + data
+
+        with open(self, 'w') as file:
+            json.dump(combined_data, file, indent=2)

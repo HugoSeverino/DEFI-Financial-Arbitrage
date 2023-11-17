@@ -1,7 +1,7 @@
-from web3._utils.abi import get_constructor_abi, merge_args_and_kwargs
+
 from web3._utils.events import get_event_data
 from web3._utils.filters import construct_event_filter_params
-from web3._utils.contracts import encode_abi
+
 
 ## From https://ethereum.stackexchange.com/questions/51637/get-all-the-past-events-of-the-contract
 
