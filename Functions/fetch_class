@@ -3,6 +3,7 @@ from .events import fetch_events
 from .JsonFile_ABI_V3 import JsonFile_ABI_V3
 from .JsonFile_ABI_V2 import JsonFile_ABI_V2
 from .JsonFile_Data_ListePools import JsonFile_Data_ListePools
+import json
 
 class EventFetcher:
     def __init__(self, web3: Web3, factory_address: Web3.toChecksumAddress, app, version):
