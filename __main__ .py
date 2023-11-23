@@ -1,14 +1,14 @@
 from Functions import fetch_pairs
 from web3 import Web3
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 # Load secret .env file
-load_dotenv()
+#load_dotenv()
 # Store credentials
-API_Keys = os.getenv('Infura_API')
+#API_Keys = os.getenv('Infura_API')
 
-infura = f'https://mainnet.infura.io/v3/{API_Keys}' #Infura API
+infura = f'https://mainnet.infura.io/v3/997e4ad54d8f4a6fa290faeba3c0c8c4' #Infura API
 
 #infura = 'http://localhost:8545' #ETH Local Node
 

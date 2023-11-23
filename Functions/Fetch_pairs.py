@@ -2,11 +2,9 @@ from web3 import Web3
 
 from .events import fetch_events
 
-import json
-from .JsonFile_ABI_V3 import JsonFile_ABI_V3
-from .JsonFile_ABI_V2 import JsonFile_ABI_V2
-from .JsonFile_Data_ListePools import JsonFile_Data_ListePools
-from .EventFetcher import EventFetcher
+
+from .JSON import JsonFile_ABI_V3, JsonFile_Data_ListePools, JsonFile_ABI_V2
+
 
 
 def fetch_pairs(web3: Web3,Factory_adress: Web3.toChecksumAddress,App,Version) -> None:
@@ -67,7 +65,7 @@ def fetch_pairs(web3: Web3,Factory_adress: Web3.toChecksumAddress,App,Version) -
             
             
             data_list.append(Pool_Infos)
-            #print(f'Adding pair {Pool_Infos}on {App}{Version}')
+            
         
         JsonFile_Data_ListePools.AddDatainJson(f'JSON/{App}{Version}.json',data_list)
         
