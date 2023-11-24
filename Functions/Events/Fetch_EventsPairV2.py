@@ -8,16 +8,16 @@ from web3._utils.events import get_event_data
 
 T = TypeVar('T')
 
-class Fetch_EventsPairV3(Generic[T],ABC):
+class Fetch_EventsPairV2(Generic[T],ABC):
 
     
     def __init__(self,web3: Web3,Factory_adress: Web3.toChecksumAddress,App):
         
         self._App = App
-        print(f'Looking for {self._App} V3 Pairs')
-        self._KindofEvent = "PoolCreated" #Get Kind of event vor V3 Pairs
-        self._factory_abi = JsonFile_ABI_V3.ReturnJsonAsPythonReadable("JSON/PairV3.json") #Get Pools ABI
-        self._fromblock = JsonFile_Data_ListePools.ReturnLastItemBlock(f'JSON/{App}V3.json') #Get Last Item Block, Return 0 if no Json
+        print(f'Looking for {self._App} V2 Pairs')
+        self._KindofEvent = "PairCreated" #Get Kind of event vor V2 Pairs
+        self._factory_abi = JsonFile_ABI_V3.ReturnJsonAsPythonReadable("JSON/PairV2.json") #Get Pools ABI
+        self._fromblock = JsonFile_Data_ListePools.ReturnLastItemBlock(f'JSON/{App}V2.json') #Get Last Item Block, Return 0 if no Json
         self._factory = web3.eth.contract( Factory_adress,abi = self._factory_abi) #Creating Contract instance for factory
         self._event = self._factory.events[self._KindofEvent] #Creating event for parir creation
         self._toblock = web3.eth.blockNumber #Get ETH Last Block Number
@@ -77,16 +77,16 @@ class Fetch_EventsPairV3(Generic[T],ABC):
                 
                 
                 Pool_Infos= {
-                    "Pool" :  ev.args.pool,
+                    "Pool" :  ev.args.pair,
                     "Token_0" : ev.args.token0,
                     "Token_1" : ev.args.token1,
-                    "fee" : ev.args.fee,
+                    "fee" : 3000, #Fees are 0.3% for V2 pools
                     "block" : ev.blockNumber,
                 }
 
                 data_list.append(Pool_Infos)
             
-            JsonFile_Data_ListePools.AddDatainJson(f'JSON/{self._App}V3.json',data_list)
+            JsonFile_Data_ListePools.AddDatainJson(f'JSON/{self._App}V2.json',data_list)
 
 
 

@@ -1,8 +1,8 @@
-from Functions import fetch_pairs
+
 from web3 import Web3
 import os
 #from dotenv import load_dotenv
-
+from Functions.Events import Fetch_EventsPairV3,Fetch_EventsPairV2
 # Load secret .env file
 #load_dotenv()
 # Store credentials
@@ -22,10 +22,16 @@ SushiswapV3_factory =  Web3.toChecksumAddress("0xbACEB8eC6b9355Dfc0269C18bac9d6E
 SushiswapV2_factory =  Web3.toChecksumAddress("0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac")
 UniswapV2_factory =  Web3.toChecksumAddress("0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f")
 
-fetch_pairs(web3,UniswapV3_factory,"Uniswap","V3")
-fetch_pairs(web3,SushiswapV3_factory,"Sushiswap","V3")
-fetch_pairs(web3,SushiswapV2_factory,"Sushiswap","V2")
-fetch_pairs(web3,UniswapV2_factory,"Uniswap","V2")
+Fetch_EventsPairV3(web3,UniswapV3_factory,"Uniswap").IterateOverBlocks() #Writing Json List Of pairs
+Fetch_EventsPairV3(web3,SushiswapV3_factory,"Sushiswap").IterateOverBlocks() #Writing Json List Of pairs
+Fetch_EventsPairV2(web3,SushiswapV2_factory,"Sushiswap").IterateOverBlocks()
+Fetch_EventsPairV2(web3,UniswapV2_factory,"Uniswap").IterateOverBlocks()
+
+#fetch_pairs(web3,UniswapV3_factory,"Uniswap","V3")
+
+
+
+
 
 
 
