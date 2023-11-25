@@ -6,7 +6,7 @@ import json
 class JsonFile_Data_ListePools(JsonFile_Data):
 
     
-    def __init__(self,JsonFile):
+    def __init__(self,JsonFile) -> None:
         pass
 
     

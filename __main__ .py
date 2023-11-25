@@ -1,21 +1,29 @@
 
 from web3 import Web3
 import os
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 from Functions.Events import Fetch_EventsPairV3,Fetch_EventsPairV2
-# Load secret .env file
-#load_dotenv()
-# Store credentials
-#API_Keys = os.getenv('Infura_API')
+from Functions.JSON import JsonFile_Data_ListePools
 
-infura = f'https://mainnet.infura.io/v3/997e4ad54d8f4a6fa290faeba3c0c8c4' #Infura API
+# Load secret .env file
+load_dotenv()
+
+# Store credentials
+API_Keys = os.getenv('Infura_API')
+
+infura = f'https://mainnet.infura.io/v3/{API_Keys}' #Infura API
 
 #infura = 'http://localhost:8545' #ETH Local Node
 
 
-web3 = Web3(Web3.HTTPProvider(infura)) # Creating Web3 instance 
+ 
 
 
+##################################################################
+############## Building Json files of DEX pools ##################
+##################################################################
+
+web3 = Web3(Web3.HTTPProvider(infura)) # Creating Web3 instance
 
 UniswapV3_factory =  Web3.toChecksumAddress("0x1f98431c8ad98523631ae4a59f267346ea31f984")
 SushiswapV3_factory =  Web3.toChecksumAddress("0xbACEB8eC6b9355Dfc0269C18bac9d6E2Bdc29C4F")
@@ -27,10 +35,18 @@ Fetch_EventsPairV3(web3,SushiswapV3_factory,"Sushiswap").IterateOverBlocks() #Wr
 Fetch_EventsPairV2(web3,SushiswapV2_factory,"Sushiswap").IterateOverBlocks()
 Fetch_EventsPairV2(web3,UniswapV2_factory,"Uniswap").IterateOverBlocks()
 
-#fetch_pairs(web3,UniswapV3_factory,"Uniswap","V3")
 
 
 
+##################################################################
+############## Insert RAW datas in SQL Database ##################
+##################################################################
+
+
+Uniswapv3_Pools = JsonFile_Data_ListePools.ReturnJsonAsPythonReadable("JSON/UniswapV3.json")
+print(len(Uniswapv3_Pools))
+#for pools in Uniswapv3_Pools:
+    #print(pools)
 
 
 

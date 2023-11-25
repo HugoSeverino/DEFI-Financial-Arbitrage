@@ -1,5 +1,5 @@
 .env
-JSON/data.json
+Functions/SQL/.env
 JSON/UniswapV2.json
 JSON/UniswapV3.json
 JSON/SushiswapV3.json
