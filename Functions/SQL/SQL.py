@@ -10,8 +10,5 @@ class SQL(Generic[T],ABC):
     def __init__(self):
         pass
 
-    @abstractmethod
-    def ReturnJsonAsPythonReadable(self) -> None:
-        pass
-
+    
     
