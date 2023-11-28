@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 from Functions.Events import Fetch_EventsPairV3,Fetch_EventsPairV2
 from Functions.JSON import JsonFile_Data_ListePools
-from Functions.SQL import SQL_Pools,SQL_Init
+from Functions.SQL import SQL_Pools,SQL_Init,SQL_Pools_V3
 
 # Load secret .env file
 load_dotenv()
@@ -43,19 +43,25 @@ Fetch_EventsPairV2(web3,UniswapV2_factory,"Uniswap").IterateOverBlocks()
 ############## Insert RAW datas in SQL Database ##################
 ##################################################################
 
-SQL_Init() #Creating Database if not existing
+SQL_Init()  #Creating Database if not existing
 
 # Create an instance of SQL_Pools
 
 sql_pools_instance = SQL_Pools()
 
-# Call the Create_Table method on the instance
-sql_pools_instance.Create_Table("UniswapV3")
+# Call the Create_Table method on the instance to create table if not existing
+sql_pools_instance.Create_Table()
 
-Uniswapv3_Pools = JsonFile_Data_ListePools.ReturnJsonAsPythonReadable("JSON/UniswapV3.json")
-print(len(Uniswapv3_Pools))
-#for pools in Uniswapv3_Pools:
-    #print(pools)
+sql_pools_instance.CloseConnexion()
+
+Uniswapv3_ListPools = JsonFile_Data_ListePools.ReturnJsonAsPythonReadable("JSON/UniswapV3.json")
+
+SQL_Pool_V3_Instance = SQL_Pools_V3()
+
+SQL_Pools_V3.Update_Database(SQL_Pool_V3_Instance,Uniswapv3_ListPools)
+
+
+
 
 
 

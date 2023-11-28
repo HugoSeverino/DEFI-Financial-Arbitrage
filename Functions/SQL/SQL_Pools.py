@@ -12,10 +12,10 @@ class SQL_Pools(SQL):
               
         self._connexion = mysql.connector.connect(host="localhost",user="root",password=SQL_Password,database="mainet",port=3306)
 
-    def Create_Table(self,name):
+    def Create_Table(self):
 
         cursor = self._connexion.cursor()    
-        cursor.execute(f'''CREATE TABLE IF NOT EXISTS {name} (
+        cursor.execute(f'''CREATE TABLE IF NOT EXISTS PoolList (
     
         pool VARCHAR(255) PRIMARY KEY,
         token0 VARCHAR(255),
@@ -27,13 +27,21 @@ class SQL_Pools(SQL):
         SQRTX96 integer,
         tick integer,
         liquidity integer,
-        block integer
+        block_creation integer,
+        block_last_use integer,
+        version integer
         );''')
 
-        cursor.close()
-        self._connexion.close()
+        
 
-    def Add_Item(self,pools):
+        
+    
+    def CloseConnexion(self):
 
-        cur = self._connexion.cursor()
+        if self._connexion.is_connected():
+
+            self._connexion.close()
+            print("Connection closed.")
+
+    
 
