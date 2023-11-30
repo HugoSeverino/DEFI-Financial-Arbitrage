@@ -4,7 +4,7 @@ import os
 #from dotenv import load_dotenv
 from Functions.Events import Fetch_EventsPairV3,Fetch_EventsPairV2
 from Functions.JSON import JsonFile_Data_ListePools
-from Functions.SQL import SQL_Pools,SQL_Init,SQL_Pools_V3
+from Functions.SQL import SQL_Pools,SQL_Init
 
 # Load secret .env file
 #load_dotenv()
@@ -49,10 +49,29 @@ SQL_Init()  #Creating Database and table if not existing
 
 Uniswapv3_ListPools = JsonFile_Data_ListePools.ReturnJsonAsPythonReadable("JSON/UniswapV3.json")
 
-SQL_Pool_V3_Instance = SQL_Pools_V3()
 
-SQL_Pool_V3_Instance.Update_Database(Uniswapv3_ListPools)
+SQL_Pool_Instance = SQL_Pools()
 
+SQL_Pool_Instance.Update_Database(Uniswapv3_ListPools,3)
+
+Sushiswapv3_ListPools = JsonFile_Data_ListePools.ReturnJsonAsPythonReadable("JSON/SushiswapV3.json")
+
+SQL_Pool_Instance = SQL_Pools()
+
+SQL_Pool_Instance.Update_Database(Sushiswapv3_ListPools,3)
+
+
+Uniswapv2_ListPools = JsonFile_Data_ListePools.ReturnJsonAsPythonReadable("JSON/UniswapV2.json")
+
+SQL_Pool_Instance = SQL_Pools()
+
+SQL_Pool_Instance.Update_Database(Uniswapv2_ListPools,2)
+
+Sushiswapv2_ListPools = JsonFile_Data_ListePools.ReturnJsonAsPythonReadable("JSON/SushiswapV2.json")
+
+SQL_Pool_Instance = SQL_Pools()
+
+SQL_Pool_Instance.Update_Database(Sushiswapv2_ListPools,2)
 
 
 

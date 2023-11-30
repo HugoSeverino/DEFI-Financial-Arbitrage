@@ -42,7 +42,7 @@ class SQL_Init(SQL):
     def CreateTable(self):
     
         cursor = self._connexion.cursor()    
-        cursor.execute(f'''CREATE TABLE IF NOT EXISTS PoolList (
+        cursor.execute('''CREATE TABLE IF NOT EXISTS PoolList (
     
         pool VARCHAR(255) PRIMARY KEY,
         token0 VARCHAR(255),
@@ -56,8 +56,19 @@ class SQL_Init(SQL):
         liquidity integer,
         block_creation integer,
         block_last_use integer,
-        version integer
+        version integer,
+        orphelin boolean
         );''')
+
+        cursor.execute('''CREATE TABLE IF NOT EXISTS TokenList (
+    
+        adrr VARCHAR(255) PRIMARY KEY,
+	    symb VARCHAR(255),
+	    deci integer,
+        error boolean
+        );''')
+
+        #cursor.execute('''ALTER TABLE PoolList ADD CONSTRAINT FK_Token0 FOREIGN KEY (token0) REFERENCES TokenList(adrr); ALTER TABLE PoolList ADD CONSTRAINT FK_Token1 FOREIGN KEY (token1) REFERENCES TokenList(adrr);''', multi=True)
 
     def CloseConnexion(self):
 
