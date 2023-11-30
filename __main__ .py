@@ -1,18 +1,18 @@
 
 from web3 import Web3
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from Functions.Events import Fetch_EventsPairV3,Fetch_EventsPairV2
 from Functions.JSON import JsonFile_Data_ListePools
 from Functions.SQL import SQL_Pools,SQL_Init,SQL_Pools_V3
 
 # Load secret .env file
-load_dotenv()
+#load_dotenv()
 
 # Store credentials
-API_Keys = os.getenv('Infura_API')
+#API_Keys = os.getenv('Infura_API')
 
-infura = f'https://mainnet.infura.io/v3/{API_Keys}' #Infura API
+infura = f'https://mainnet.infura.io/v3/997e4ad54d8f4a6fa290faeba3c0c8c4' #Infura API
 
 #infura = 'http://localhost:8545' #ETH Local Node
 
@@ -43,22 +43,15 @@ Fetch_EventsPairV2(web3,UniswapV2_factory,"Uniswap").IterateOverBlocks()
 ############## Insert RAW datas in SQL Database ##################
 ##################################################################
 
-SQL_Init()  #Creating Database if not existing
+SQL_Init()  #Creating Database and table if not existing
 
-# Create an instance of SQL_Pools
 
-sql_pools_instance = SQL_Pools()
-
-# Call the Create_Table method on the instance to create table if not existing
-sql_pools_instance.Create_Table()
-
-sql_pools_instance.CloseConnexion()
 
 Uniswapv3_ListPools = JsonFile_Data_ListePools.ReturnJsonAsPythonReadable("JSON/UniswapV3.json")
 
 SQL_Pool_V3_Instance = SQL_Pools_V3()
 
-SQL_Pools_V3.Update_Database(SQL_Pool_V3_Instance,Uniswapv3_ListPools)
+SQL_Pool_V3_Instance.Update_Database(Uniswapv3_ListPools)
 
 
 
