@@ -11,16 +11,17 @@ T = TypeVar('T')
 class Fetch_EventsPairV3(Generic[T],ABC):
 
     
-    def __init__(self,web3: Web3,Factory_adress: Web3.toChecksumAddress,App):
+    def __init__(self,web3: Web3,Factory_adress,App):
         
         self._App = App
+        self._w3 = web3
         print(f'Looking for {self._App} V3 Pairs')
         self._KindofEvent = "PoolCreated" #Get Kind of event vor V3 Pairs
         self._factory_abi = JsonFile_ABI_V3.ReturnJsonAsPythonReadable("JSON/PairV3.json") #Get Pools ABI
         self._fromblock = JsonFile_Data_ListePools.ReturnLastItemBlock(f'JSON/{App}V3.json') #Get Last Item Block, Return 0 if no Json
         self._factory = web3.eth.contract( Factory_adress,abi = self._factory_abi) #Creating Contract instance for factory
         self._event = self._factory.events[self._KindofEvent] #Creating event for parir creation
-        self._toblock = web3.eth.blockNumber #Get ETH Last Block Number
+        self._toblock = web3.eth.block_number #Get ETH Last Block Number
   
     def fetch_events(self,event = None,argument_filters=None,from_block=None,to_block="latest",address=None,topics=None):
         
@@ -28,7 +29,7 @@ class Fetch_EventsPairV3(Generic[T],ABC):
             raise TypeError("Missing mandatory keyword argument to getLogs: from_Block")
 
         abi = self._event._get_event_abi()
-        abi_codec = self._event.web3.codec
+        abi_codec = self._w3.codec
 
         # Set up any indexed event filters if needed
         argument_filters = dict()
@@ -46,7 +47,7 @@ class Fetch_EventsPairV3(Generic[T],ABC):
         )
 
         # Call node over JSON-RPC API
-        logs = self._event.web3.eth.getLogs(event_filter_params)
+        logs = self._w3.eth.get_logs(event_filter_params)
 
         # Convert raw binary event data to easily manipulable Python objects
         for entry in logs:
