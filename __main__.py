@@ -51,28 +51,28 @@ SQL_Init()  #Creating Database and table if not existing
 Uniswapv3_ListPools = JsonFile_Data_ListePools.ReturnJsonAsPythonReadable("JSON/UniswapV3.json")
 
 
-SQL_Pool_Instance = SQL_Pools()
 
-SQL_Pool_Instance.Update_Database(Uniswapv3_ListPools,3)
+
+SQL_Pools().Update_Database(Uniswapv3_ListPools,3)
 
 Sushiswapv3_ListPools = JsonFile_Data_ListePools.ReturnJsonAsPythonReadable("JSON/SushiswapV3.json")
 
-SQL_Pool_Instance = SQL_Pools()
 
-SQL_Pool_Instance.Update_Database(Sushiswapv3_ListPools,3)
+
+SQL_Pools().Update_Database(Sushiswapv3_ListPools,3)
 
 
 Uniswapv2_ListPools = JsonFile_Data_ListePools.ReturnJsonAsPythonReadable("JSON/UniswapV2.json")
 
-SQL_Pool_Instance = SQL_Pools()
 
-SQL_Pool_Instance.Update_Database(Uniswapv2_ListPools,2)
+
+SQL_Pools().Update_Database(Uniswapv2_ListPools,2)
 
 Sushiswapv2_ListPools = JsonFile_Data_ListePools.ReturnJsonAsPythonReadable("JSON/SushiswapV2.json")
 
-SQL_Pool_Instance = SQL_Pools()
 
-SQL_Pool_Instance.Update_Database(Sushiswapv2_ListPools,2)
+
+SQL_Pools().Update_Database(Sushiswapv2_ListPools,2)
 
 
 
