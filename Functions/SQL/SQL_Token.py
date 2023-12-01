@@ -29,6 +29,16 @@ class SQL_Token(SQL_Init):
             else:
                 print(f"Error Creating Database: {e}")
                 pass
+    
+    def Count(self):
+    
+        cursor = self._connexion.cursor()
+        
+        nb=cursor.execute('SELECT COUNT(*) FROM TokenList')
+        nb=cursor.fetchall()[0][0]
+        
+        super().CloseConnexion()
+        return nb
         
         
 

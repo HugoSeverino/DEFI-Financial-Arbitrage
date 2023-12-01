@@ -28,8 +28,9 @@ class SQL_Pools(SQL_Init):
                 self._fee = pools["fee"]
                 self._block = pools["block"]
                 self._version = version
-                print(f'inserting Pool infos {pools}')
+                
                 self._cursor.execute("""INSERT INTO PoolList (pool,token0,token1,fee,block_creation,version) VALUES (%s,%s,%s,%s,%s,%s)""",(self._Pool,self._Token_0,self._Token_1,self._fee,self._block,self._version))
+                print(f'inserting Pool infos {pools}')
                 self._connexion.commit()
                 print(f'inserting tokens in TokenList')
                 SQL_Token.Update_Database(self,self._Token_0,self._Token_1)
@@ -43,6 +44,17 @@ class SQL_Pools(SQL_Init):
                 pass
 
         super().CloseConnexion()
+
+    def Count(self):
+
+        cursor = self._connexion.cursor()
+        nb=cursor.execute('SELECT COUNT(*) FROM PoolList')
+        nb=cursor.fetchall()[0][0]
+        
+        super().CloseConnexion()
+        return nb
+    
+    
 
 
 

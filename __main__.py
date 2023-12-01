@@ -4,7 +4,7 @@ import os
 #from dotenv import load_dotenv
 from Functions.Events import Fetch_EventsPairV3,Fetch_EventsPairV2
 from Functions.JSON import JsonFile_Data_ListePools
-from Functions.SQL import SQL_Pools,SQL_Init
+from Functions.SQL import SQL_Pools,SQL_Init,SQL_Token
 
 
 # Load secret .env file
@@ -74,6 +74,17 @@ SQL_Pool_Instance = SQL_Pools()
 
 SQL_Pool_Instance.Update_Database(Sushiswapv2_ListPools,2)
 
+
+
+##################################################################
+################# Display Some informations ######################
+##################################################################
+
+
+
+
+
+print(f'We have {SQL_Pools().Count()} Pools and {SQL_Token().Count()} Token in our Mysql Database')
 
 
 
