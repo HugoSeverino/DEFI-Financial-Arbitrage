@@ -80,12 +80,15 @@ SQL_Pools().Update_Database(Sushiswapv2_ListPools,2)
 ################# Display Some informations ######################
 ##################################################################
 
+Number_Of_Pools = SQL_Pools().Count()
+Number_Of_Tokens = SQL_Token().Count()
 
 
+print(f'We have {Number_Of_Pools} Pools and {Number_Of_Tokens} Token in our Mysql Database')
 
+Number_Of_Tokens_No_Orphelin = SQL_Pools().Update_Orphelin()
 
-print(f'We have {SQL_Pools().Count()} Pools and {SQL_Token().Count()} Token in our Mysql Database')
-
+print(f'After finding orphelins token we have now {Number_Of_Tokens_No_Orphelin}')
 
 
 

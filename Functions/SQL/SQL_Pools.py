@@ -54,6 +54,69 @@ class SQL_Pools(SQL_Init):
         super().CloseConnexion()
         return nb
     
+    def Update_Orphelin(self):
+
+
+        cursor = self._connexion.cursor()
+
+        query = """
+        UPDATE PoolList
+        SET orphelin = true
+        WHERE token0 IN (
+            SELECT token
+            FROM (
+                SELECT token0 AS token FROM PoolList
+                UNION ALL
+                SELECT token1 AS token FROM PoolList
+            ) AS AllTokens
+            GROUP BY token
+            HAVING COUNT(token) = 1
+        )
+        OR token1 IN (
+            SELECT token
+            FROM (
+                SELECT token0 AS token FROM PoolList
+                UNION ALL
+                SELECT token1 AS token FROM PoolList
+            ) AS AllTokens
+            GROUP BY token
+            HAVING COUNT(token) = 1
+        );
+        """
+
+        cursor.execute(query)
+        self._connexion.commit()
+        
+        query = """
+        UPDATE TokenList
+        SET orphelin = true
+        WHERE adrr IN (
+            SELECT token
+            FROM (
+                SELECT token0 AS token FROM PoolList
+                UNION ALL
+                SELECT token1 AS token FROM PoolList
+            ) AS AllTokens
+            GROUP BY token
+            HAVING COUNT(token) = 1
+        );
+        """
+        cursor.execute(query)
+        self._connexion.commit()
+
+
+        query = """
+        SELECT COUNT(*) 
+        FROM TokenList
+        WHERE orphelin != true;
+        """
+
+        cursor.execute(query)
+        result = cursor.fetchall()[0][0]
+        super().CloseConnexion()
+        
+        return result
+    
     
 
 

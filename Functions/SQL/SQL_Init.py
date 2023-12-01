@@ -65,7 +65,8 @@ class SQL_Init(SQL):
         adrr VARCHAR(255) PRIMARY KEY,
 	    symb VARCHAR(255),
 	    deci integer,
-        error boolean
+        error boolean,
+        orphelin boolean
         );''')
 
         #cursor.execute('''ALTER TABLE PoolList ADD CONSTRAINT FK_Token0 FOREIGN KEY (token0) REFERENCES TokenList(adrr); ALTER TABLE PoolList ADD CONSTRAINT FK_Token1 FOREIGN KEY (token1) REFERENCES TokenList(adrr);''', multi=True)
