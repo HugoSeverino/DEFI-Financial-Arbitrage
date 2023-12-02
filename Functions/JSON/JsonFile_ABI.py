@@ -9,4 +9,5 @@ class JsonFile_ABI(JsonFile):
     
     def ReturnJsonAsPythonReadable(self) -> None:
         with open(self) as Json: 
-            return json.load(Json)
+            ABI = json.load(Json)
+            return ABI

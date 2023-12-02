@@ -83,6 +83,7 @@ class Fetch_EventsPairV3(Generic[T],ABC):
                     "Token_1" : ev.args.token1,
                     "fee" : ev.args.fee,
                     "block" : ev.blockNumber,
+                    "tickSpacing" : ev.args.tickSpacing,
                 }
 
                 data_list.append(Pool_Infos)

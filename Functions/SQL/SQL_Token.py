@@ -2,6 +2,7 @@ from .SQL_Init import SQL_Init
 import mysql.connector
 import os
 from mysql.connector import Error
+from ..JSON import JsonFile_ABI
 
 
 class SQL_Token(SQL_Init):
@@ -26,6 +27,7 @@ class SQL_Token(SQL_Init):
         except Error as e:
             if e.errno == 1062:
                 print("Token Already in DB")
+                
             else:
                 print(f"Error Creating Database: {e}")
                 pass
@@ -42,7 +44,7 @@ class SQL_Token(SQL_Init):
     
     def Update_Orphelin(self):
 
-        print("Updating Tokens Database...")
+        print("Updating Tokens Orphelins Database...")
 
         cursor = self._connexion.cursor()
 
@@ -92,6 +94,68 @@ class SQL_Token(SQL_Init):
         super().CloseConnexion()
         
         return result
+    
+    def Update_Error(self,web3):
+
+        print("Updating Tokens Errors Database...")
+
+
+
+        self._cursor = self._connexion.cursor()
+
+        query = """
+        SELECT adrr 
+        FROM TokenList
+        WHERE error IS NOT true AND error IS NOT FALSE AND orphelin IS false;
+        """
+        
+
+        self._cursor.execute(query)
+        result = self._cursor.fetchall()
+        
+        print(f'{len(result)} Tokens to process')
+
+        self._ERC20_abi = JsonFile_ABI.ReturnJsonAsPythonReadable("JSON/ERC20.json")
+
+        for Token in result: 
+            
+            self._Adress = Token[0]
+            try:
+                self._Token_Contract_Instance = web3.eth.contract( self._Adress,abi = self._ERC20_abi)
+                
+
+                self._Symbols = self._Token_Contract_Instance.functions.symbol().call()
+
+                self._Decimals = self._Token_Contract_Instance.functions.decimals().call()
+                print(f'Inserting new Token Infos : Adress :{self._Adress} Symbols : {self._Symbols} with {self._Decimals} decimals')
+
+                self._cursor.execute("""
+                UPDATE TokenList 
+                SET symb = %s, deci = %s, error = %s
+                WHERE adrr =%s
+                """,(self._Symbols,self._Decimals,False,self._Adress))
+
+                self._connexion.commit()
+            
+            except Exception as e:
+
+                self._cursor.execute("""
+                UPDATE TokenList 
+                SET error = %s 
+                WHERE adrr =%s
+                """,(True,self._Adress))
+                self._connexion.commit()
+                print(f"Error processing token {self._Adress}: {e}")
+
+                continue
+
+
+        super().CloseConnexion()
+
+        
+    
+
+
 
         
         

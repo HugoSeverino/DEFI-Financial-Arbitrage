@@ -18,7 +18,7 @@ infura = f'https://mainnet.infura.io/v3/{API_Keys}' #Infura API
 #infura = 'http://localhost:8545' #ETH Local Node
 
 
- 
+
 
 
 ##################################################################
@@ -26,7 +26,7 @@ infura = f'https://mainnet.infura.io/v3/{API_Keys}' #Infura API
 ##################################################################
 
 web3 = Web3(Web3.HTTPProvider(infura)) # Creating Web3 instance
-
+#SQL_Token().Update_Error(web3)
 UniswapV3_factory =  Web3.to_checksum_address("0x1f98431c8ad98523631ae4a59f267346ea31f984")
 SushiswapV3_factory =  Web3.to_checksum_address("0xbACEB8eC6b9355Dfc0269C18bac9d6E2Bdc29C4F")
 SushiswapV2_factory =  Web3.to_checksum_address("0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac")
@@ -86,11 +86,17 @@ Number_Of_Tokens = SQL_Token().Count()
 
 print(f'We have {Number_Of_Pools} Pools and {Number_Of_Tokens} Token in our Mysql Database')
 
+##################################################################
+################# Update Error and Orphelins #####################
+##################################################################
+
 Number_Of_Pools_no_Orphelin = SQL_Pools().Update_Orphelin()
 Number_Of_Tokens_no_Orphelin = SQL_Token().Update_Orphelin()
 
 
 print(f'After excluding orphelins  we have now {Number_Of_Pools_no_Orphelin} Pools and {Number_Of_Tokens_no_Orphelin} Tokens')
+
+print(SQL_Token().Update_Error())
 
 
 
