@@ -10,10 +10,10 @@ class SQL_Init(SQL):
 
         SQL_Password = os.getenv('SQL_Password')
                 
-        self._connexion = mysql.connector.connect(host="localhost",user="root",password="angusyoung",port=3306)
+        self._connexion = mysql.connector.connect(host="localhost",user="root",password=SQL_Password,port=3306)
 
         self.CreateDatabase()
-        self._connexion = mysql.connector.connect(host="localhost",user="root",password="angusyoung",database="mainet",port=3306)
+        self._connexion = mysql.connector.connect(host="localhost",user="root",password=SQL_Password,database="mainet",port=3306)
         self.CreateTable()
         self.CloseConnexion()
 

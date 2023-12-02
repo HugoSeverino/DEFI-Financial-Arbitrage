@@ -10,7 +10,7 @@ class SQL_Token(SQL_Init):
 
         SQL_Password = os.getenv('SQL_Password')
               
-        self._connexion = mysql.connector.connect(host="localhost",user="root",password="angusyoung",database="mainet",port=3306)
+        self._connexion = mysql.connector.connect(host="localhost",user="root",password=SQL_Password,database="mainet",port=3306)
 
         
 
@@ -39,6 +39,41 @@ class SQL_Token(SQL_Init):
         
         super().CloseConnexion()
         return nb
+    
+    def Update_Orphelin(self):
+
+        cursor = self._connexion.cursor()
+
+        query = """
+        UPDATE TokenList
+        SET orphelin = true
+        WHERE adrr IN (
+            SELECT token
+            FROM (
+                SELECT token0 AS token FROM PoolList
+                UNION ALL
+                SELECT token1 AS token FROM PoolList
+            ) AS AllTokens
+            GROUP BY token
+            HAVING COUNT(token) = 1
+        );
+        """
+        cursor.execute(query)
+        self._connexion.commit()
+
+
+        query = """
+        SELECT COUNT(*) 
+        FROM TokenList
+        WHERE orphelin IS NOT true;
+        """
+
+        cursor.execute(query)
+        result = cursor.fetchall()[0][0]
+        super().CloseConnexion()
+        
+        return result
+
         
         
 

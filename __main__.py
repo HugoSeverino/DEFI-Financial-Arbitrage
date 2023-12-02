@@ -1,19 +1,19 @@
 
 from web3 import Web3
 import os
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 from Functions.Events import Fetch_EventsPairV3,Fetch_EventsPairV2
 from Functions.JSON import JsonFile_Data_ListePools
 from Functions.SQL import SQL_Pools,SQL_Init,SQL_Token
 
 
 # Load secret .env file
-#load_dotenv()
+load_dotenv()
 
 # Store credentials
-#API_Keys = os.getenv('Infura_API')
+API_Keys = os.getenv('Infura_API')
 
-infura = f'https://mainnet.infura.io/v3/997e4ad54d8f4a6fa290faeba3c0c8c4' #Infura API
+infura = f'https://mainnet.infura.io/v3/{API_Keys}' #Infura API
 
 #infura = 'http://localhost:8545' #ETH Local Node
 
@@ -86,9 +86,11 @@ Number_Of_Tokens = SQL_Token().Count()
 
 print(f'We have {Number_Of_Pools} Pools and {Number_Of_Tokens} Token in our Mysql Database')
 
-Number_Of_Tokens_No_Orphelin = SQL_Pools().Update_Orphelin()
+Number_Of_Pools_no_Orphelin = SQL_Pools().Update_Orphelin()
+Number_Of_Tokens_no_Orphelin = SQL_Token().Update_Orphelin()
 
-print(f'After finding orphelins token we have now {Number_Of_Tokens_No_Orphelin}')
+
+print(f'After excluding orphelins  we have now {Number_Of_Pools_no_Orphelin} Pools and {Number_Of_Tokens_no_Orphelin} Tokens')
 
 
 
