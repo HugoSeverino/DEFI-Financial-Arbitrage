@@ -42,6 +42,8 @@ class SQL_Token(SQL_Init):
     
     def Update_Orphelin(self):
 
+        print("Updating Tokens Database...")
+
         cursor = self._connexion.cursor()
 
         query = """
@@ -56,6 +58,23 @@ class SQL_Token(SQL_Init):
             ) AS AllTokens
             GROUP BY token
             HAVING COUNT(token) = 1
+        );
+        """
+        cursor.execute(query)
+        self._connexion.commit()
+
+        query = """
+        UPDATE TokenList
+        SET orphelin = false
+        WHERE adrr IN (
+            SELECT token
+            FROM (
+                SELECT token0 AS token FROM PoolList
+                UNION ALL
+                SELECT token1 AS token FROM PoolList
+            ) AS AllTokens
+            GROUP BY token
+            HAVING COUNT(token) > 1
         );
         """
         cursor.execute(query)
