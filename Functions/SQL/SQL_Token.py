@@ -106,7 +106,7 @@ class SQL_Token(SQL_Init):
         query = """
         SELECT adrr 
         FROM TokenList
-        WHERE error IS NOT true AND error IS NOT FALSE AND orphelin IS false;
+        WHERE error IS NOT true AND error IS NOT false AND orphelin IS false;
         """
         
 

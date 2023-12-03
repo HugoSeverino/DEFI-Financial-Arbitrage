@@ -31,7 +31,7 @@ class SQL_Pools(SQL_Init):
 
                 if "tickSpacing" in pools:
                     self._tickSpacing = pools["tickSpacing"]
-                    self._cursor.execute("""INSERT INTO PoolList (pool,token0,token1,fee,block_creation,version,tick) VALUES (%s,%s,%s,%s,%s,%s)""",(self._Pool,self._Token_0,self._Token_1,self._fee,self._block,self._version,self._tickSpacing))
+                    self._cursor.execute("""INSERT INTO PoolList (pool,token0,token1,fee,block_creation,version,tick) VALUES (%s,%s,%s,%s,%s,%s,%s)""",(self._Pool,self._Token_0,self._Token_1,self._fee,self._block,self._version,self._tickSpacing))
                 else:
                     self._cursor.execute("""INSERT INTO PoolList (pool,token0,token1,fee,block_creation,version) VALUES (%s,%s,%s,%s,%s,%s)""",(self._Pool,self._Token_0,self._Token_1,self._fee,self._block,self._version))
                 print(f'inserting Pool infos {pools}')
