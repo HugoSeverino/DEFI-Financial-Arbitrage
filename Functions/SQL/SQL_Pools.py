@@ -60,7 +60,7 @@ class SQL_Pools(SQL_Init):
     
     def Update_Orphelin(self):
 
-        print("Updating Pools Database...")
+        print("Updating Orphelins Pools Database...")
         cursor = self._connexion.cursor()
 
         query = """
@@ -131,6 +131,18 @@ class SQL_Pools(SQL_Init):
         super().CloseConnexion()
         
         return result
+    
+    def Update_Pools_Data(self,web3): #First time fetching all avaible pools refresh
+
+        print("Updating Pools Data...")
+        self._last_block = web3.eth.block_number #Even if some data will be updated with a block more recent we apply for all pools this value for block_last_refresh to save some api request
+
+        print(f'Update data from block {self._last_block}')
+
+        cursor = self._connexion.cursor()
+
+        
+
     
     
 

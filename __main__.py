@@ -98,6 +98,12 @@ print(f'After excluding orphelins  we have now {Number_Of_Pools_no_Orphelin} Poo
 
 SQL_Token().Update_Error(web3)
 
+##################################################################
+############### Update Pools Reserves and infos ##################
+##################################################################
+
+SQL_Pools().Update_Pools_Data(web3)
+
 
 
 

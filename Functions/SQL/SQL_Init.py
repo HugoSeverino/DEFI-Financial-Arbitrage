@@ -57,7 +57,10 @@ class SQL_Init(SQL):
         block_creation integer,
         block_last_use integer,
         version integer,
-        orphelin boolean
+        orphelin boolean,
+        block_last_refresh integer,
+        t0_t1 float8,
+        t1_t0 float8
         );''')
 
         cursor.execute('''CREATE TABLE IF NOT EXISTS TokenList (
