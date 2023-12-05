@@ -96,7 +96,7 @@ Number_Of_Tokens_no_Orphelin = SQL_Token().Update_Orphelin()
 
 print(f'After excluding orphelins  we have now {Number_Of_Pools_no_Orphelin} Pools and {Number_Of_Tokens_no_Orphelin} Tokens')
 
-#print(SQL_Token().Update_Error())
+SQL_Token().Update_Error(web3)
 
 
 
