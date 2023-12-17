@@ -17,4 +17,7 @@ class Fetch_Event(Generic[T],ABC):
     def fetch_events(self):
         
         pass
-           
+
+    @abstractmethod 
+    def IterateOverBlocks(self):
+        pass
