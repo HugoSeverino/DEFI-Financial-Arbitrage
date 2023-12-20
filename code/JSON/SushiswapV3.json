@@ -1,0 +1,906 @@
+[
+  {
+    "Pool": "0x35644Fb61aFBc458bf92B15AdD6ABc1996Be5014",
+    "Token_0": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 500,
+    "block": 16984102,
+    "tickSpacing": 10
+  },
+  {
+    "Pool": "0x72c2178E082feDB13246877B5aA42ebcE1b72218",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+    "fee": 500,
+    "block": 16987342,
+    "tickSpacing": 10
+  },
+  {
+    "Pool": "0xfA6e8E97ecECDC36302eCA534f63439b1E79487B",
+    "Token_0": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "Token_1": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+    "fee": 100,
+    "block": 16987365,
+    "tickSpacing": 1
+  },
+  {
+    "Pool": "0x31ac258B911Af9a0d2669ebDFC4e39D92e96b772",
+    "Token_0": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+    "Token_1": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "fee": 100,
+    "block": 16987371,
+    "tickSpacing": 1
+  },
+  {
+    "Pool": "0x1A29903c3909CB72eFF058e8ec2632bc6C9c3F55",
+    "Token_0": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+    "Token_1": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+    "fee": 100,
+    "block": 16987377,
+    "tickSpacing": 1
+  },
+  {
+    "Pool": "0x87C7056BBE6084f03304196Be51c6B90B6d85Aa2",
+    "Token_0": "0x6B3595068778DD592e39A122f4f5a5cF09C90fE2",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 16987392,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x801CCFae9d2C77893B545E8D0E4637C055CD26cB",
+    "Token_0": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 500,
+    "block": 16987403,
+    "tickSpacing": 10
+  },
+  {
+    "Pool": "0x5f11853100774087030845d4C47A9d42b429Ed83",
+    "Token_0": "0x5B7533812759B45C2B44C19e320ba2cD2681b542",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17005446,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x46E2efc8468f26822a6924EC9C2B7182f3671dae",
+    "Token_0": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "Token_1": "0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1",
+    "fee": 10000,
+    "block": 17007354,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x7c0A81c0cd5c976F88Fa102063ec12C388DA9408",
+    "Token_0": "0x5325D78529ef74105004bd4114CC569303Ce8B5f",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17203190,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x9Fa0D7b67175F6B17801dfE1BAAD8bddD59931B8",
+    "Token_0": "0x9D80d26e1Db4Dac67a7689EA8d88aE3f871383e3",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17208705,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x9130F1C937bB57Da4E0E5Ad7f6081D40e6A29455",
+    "Token_0": "0x97Ac4a2439A47c07ad535bb1188c989dae755341",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17271420,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x5a7EED1100d494d902e86bC700025e45A8c18b4C",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xEf8E456967122Db4c3C160314bDE8d2602Ad6199",
+    "fee": 10000,
+    "block": 17288788,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x102a620d51f803E04B3BCa2CA9AD1379eeD45A76",
+    "Token_0": "0xa47c8bf37f92aBed4A126BDA807A7b7498661acD",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 100,
+    "block": 17325735,
+    "tickSpacing": 1
+  },
+  {
+    "Pool": "0x4CF1a4912181cf437B4bC17484Ff0aC2FAb90bf3",
+    "Token_0": "0x64aa3364F17a4D01c6f1751Fd97C2BD3D7e7f1D5",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17326859,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x98420b1AFDb2353fE5c77F20D8f541B4DBD18aeC",
+    "Token_0": "0x9bf1D7D63dD7a4ce167CF4866388226EEefa702E",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 17335302,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xFdFff5FbA010d08138D12279Bf2578A3C14Df048",
+    "Token_0": "0x9d409a0A012CFbA9B15F6D4B36Ac57A46966Ab9a",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 100,
+    "block": 17337268,
+    "tickSpacing": 1
+  },
+  {
+    "Pool": "0xFecf72Dd7fa12c7caf21AF9e8Da2E204EC9Acb00",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
+    "fee": 3000,
+    "block": 17339180,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0xd66675149c8348DA58595195a04fA70b3661CC7C",
+    "Token_0": "0x6e22a97606a8dFeFab0fF33a39af2796168a978B",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 17344753,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x6d6b0c1D79EB72FF28B8B5E3EcD35bbe2CBE7d78",
+    "Token_0": "0x3b484b82567a09e2588A13D54D032153f0c0aEe0",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 100,
+    "block": 17350044,
+    "tickSpacing": 1
+  },
+  {
+    "Pool": "0x763d3b7296e7C9718AD5B058aC2692A19E5b3638",
+    "Token_0": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17361030,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x1B9FBe3E80911505A91CF5A087D272242Ec4b7B2",
+    "Token_0": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17362179,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0xE93E4B6Dc2D612A290B8c4A14A16fE67A03d9dB9",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xe803178b48A0e560C2b19F3b3d4e504f79D229ce",
+    "fee": 10000,
+    "block": 17377971,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xA5F43B0EBaEfbEd5B1f1bFc809AF15254EA1e9c4",
+    "Token_0": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17389904,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x319C7BC8235177f15622d6E41c92B1DD0989e9F9",
+    "Token_0": "0x0f2D719407FdBeFF09D87557AbB7232601FD9F29",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 17393191,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x2D59Ee493F986a92BADECa745b39E2838c5EADF5",
+    "Token_0": "0x0f2D719407FdBeFF09D87557AbB7232601FD9F29",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17414422,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x4E9B68Ca8C0e963189133577F047dCA610469907",
+    "Token_0": "0x905Ff01Bf05bbd2De91B3F09Cc86187EA07EDec3",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 17459582,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x5Ea783525631f0C22f07d5A9791921c59fD98F00",
+    "Token_0": "0x905Ff01Bf05bbd2De91B3F09Cc86187EA07EDec3",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17469267,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0xC517d9286b5D69235182c49650cc96892fdA4c19",
+    "Token_0": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
+    "Token_1": "0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F",
+    "fee": 3000,
+    "block": 17472824,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0xca48B3B3835F310eEBd95a06f37E44de7945b7FA",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xC62DEF1701309bb76e6B39B6ab8B5fAC910A3C87",
+    "fee": 3000,
+    "block": 17484118,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x6d0612C2c70CD084AFEbFdc196c49B02C172abA1",
+    "Token_0": "0x9b5161a41B58498Eb9c5FEBf89d60714089d2253",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17488846,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0xBcF7195562ce684562c0cEA5f2D3a720779E6ec1",
+    "Token_0": "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17509939,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0xDA6aA607A2a51f25bCBdF98c0923be28D96c42d3",
+    "Token_0": "0x50327c6c5a14DCaDE707ABad2E27eB517df87AB5",
+    "Token_1": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "fee": 3000,
+    "block": 17511182,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x84b2F2D7E1577d6EEbbb2239157Cd2d644959bA3",
+    "Token_0": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 100,
+    "block": 17521759,
+    "tickSpacing": 1
+  },
+  {
+    "Pool": "0x3288C4E3445965C8Da638fb81184A5F1251E7834",
+    "Token_0": "0x905F06DEBcd355809c0EAbe2aBc1332A5C7159CD",
+    "Token_1": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+    "fee": 3000,
+    "block": 17524781,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0xDe42633b2703B33132F0299474490bE2b00165a4",
+    "Token_0": "0xB6136A7F650beCbB06abe2B796f8D967BEdD86a6",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17526467,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x91729e174956F7D04AD7d7a02460ca698457C530",
+    "Token_0": "0xa1d6Df714F91DeBF4e0802A542E13067f31b8262",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17548980,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x38f79dFF85CfEE1763a72f13986deC32cC65DdAf",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xccC8cb5229B0ac8069C51fd58367Fd1e622aFD97",
+    "fee": 500,
+    "block": 17562549,
+    "tickSpacing": 10
+  },
+  {
+    "Pool": "0xF954d40C0c18e707c69318A9e3bd6230D4d56a11",
+    "Token_0": "0x767FE9EDC9E0dF98E07454847909b5E959D7ca0E",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17571562,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x22f25E528D734eA80b683aBd15716c236Bf397f2",
+    "Token_0": "0x50D1c9771902476076eCFc8B2A83Ad6b9355a4c9",
+    "Token_1": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "fee": 10000,
+    "block": 17582342,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xEF2bc30D60912BfAC7018073D1E08b85e0ce4C4f",
+    "Token_0": "0xa1d6Df714F91DeBF4e0802A542E13067f31b8262",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 500,
+    "block": 17585033,
+    "tickSpacing": 10
+  },
+  {
+    "Pool": "0xd8359E2c059080Ed7185b6AC19F28F66A8a2bC95",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xd2877702675e6cEb975b4A1dFf9fb7BAF4C91ea9",
+    "fee": 10000,
+    "block": 17609454,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xb3CCF99930023e800b2D27FE3FF15f1DB01d51cE",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xD291E7a03283640FDc51b121aC401383A46cC623",
+    "fee": 3000,
+    "block": 17646973,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x409de25Fe2e785747D0eAd2d48C8229f4D15645D",
+    "Token_0": "0x44348cD743C78D5d2Cb0d3e12fa8e9ad20DAcDD5",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 500,
+    "block": 17648971,
+    "tickSpacing": 10
+  },
+  {
+    "Pool": "0x8fa8Eb8a257967e6105E2db4FEc6474A62A2922d",
+    "Token_0": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 100,
+    "block": 17651978,
+    "tickSpacing": 1
+  },
+  {
+    "Pool": "0xc6c57B16412E9A4e980d3C30F41B4F0dFd8845ed",
+    "Token_0": "0x6f3277ad0782a7DA3eb676b85a8346A100BF9C1c",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 17679886,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xbB6B93305Cfeb362a680a283b0ACE4560D46046f",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xf7A0383750feF5AbaCe57cc4C9ff98e3790202b3",
+    "fee": 10000,
+    "block": 17681239,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x495e0C5A4107544937d0F1996eD84AB4D83272e7",
+    "Token_0": "0x39fBBABf11738317a448031930706cd3e612e1B9",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17687322,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x9d38d6F6c85C5Af853D4B5A7dA9A59FF580e0435",
+    "Token_0": "0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 17690137,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xbBEA631E39b14eeaFCC8a2b7081b4C76b204dC2f",
+    "Token_0": "0x5b4C95f76b8BD3aDA1D8Baa717cf658e14cF0DBF",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17709337,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x967cCF761ccdF9b8c4f0e69bE976843FAC2FfA78",
+    "Token_0": "0xB60E258b85fc6ac415Fa3A452ddEFA2b78E541C1",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 500,
+    "block": 17744674,
+    "tickSpacing": 10
+  },
+  {
+    "Pool": "0x2aFaC7a13f9b39Aa7BbC910C3ff77f4e7ecB7D21",
+    "Token_0": "0x7f3141c4D6b047fb930991b450f1eD996a51CB26",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 17767023,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x2fd4BD861186DF263C0B9bfA0ce9266DE88f3203",
+    "Token_0": "0x55296f69f40Ea6d20E478533C15A6B08B654E758",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17780759,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x54e218DCAad0bbF60963Ed73268c18A67899De15",
+    "Token_0": "0x0445174b6FA65dF016AC975967148d257598ee9f",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17817029,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x4c137C88d6D5F7A32E803373A73d811167c1E7e3",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xcB84d72e61e383767C4DFEb2d8ff7f4FB89abc6e",
+    "fee": 3000,
+    "block": 17819501,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0xf21C1a5fe2be99a803BE33489f0d4f6e3dec7941",
+    "Token_0": "0x92D6C1e31e14520e676a687F0a93788B716BEff5",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 17820289,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x8Da41d45c183e63D5eB2ecacD30Ed6dd4a640cC2",
+    "Token_0": "0x50D1c9771902476076eCFc8B2A83Ad6b9355a4c9",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 17825873,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xC5E0A6a1fE4B128c342702CA96346F8846493924",
+    "Token_0": "0x8c223a82E07feCB49D602150d7C2B3A4c9630310",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 17838543,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x8a587eE3D7E16C772F3F39c18934DcbE096f3eD8",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xe4b48B6bbAFcA1F82Ad2976E30A81c800C249Aa3",
+    "fee": 100,
+    "block": 17851444,
+    "tickSpacing": 1
+  },
+  {
+    "Pool": "0x0a244213B4a49AF0720C4AEBba5dB65C9D7Ec067",
+    "Token_0": "0xAABA5e2BC02fa7875673Ab60c8d38f09237Ef430",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 17854767,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xb30Ac0123602Fe575a5A18A1F59A00e3388f5AAd",
+    "Token_0": "0x27d0852Cfcf36d29B02644b778481B02eBfe90f0",
+    "Token_1": "0x9e10f61749c4952C320412A6B26901605Ff6Da1d",
+    "fee": 10000,
+    "block": 17872335,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x31e06ab0b66FE73CCC0A9EfDA332A6f096180b75",
+    "Token_0": "0x1fE24F25b1Cf609B9c4e7E12D802e3640dFA5e43",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 17897356,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x5398C0f218f79D846B4824c92c33739fec0DB73c",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xE80C0cd204D654CEbe8dd64A4857cAb6Be8345a3",
+    "fee": 10000,
+    "block": 17897773,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xA090A1657DBf752fCA8638624F26E9284E33da3a",
+    "Token_0": "0x8ED2Fc62D6850eAaDcB717465752dab591286839",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 17906502,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x5B02adAc06a5D8D688c63E7B7B54965fF9247Fd3",
+    "Token_0": "0x0F5D2fB29fb7d3CFeE444a200298f468908cC942",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17912741,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0xd5A7923F2e1f7a71AFA3e849862abf7D79d686ae",
+    "Token_0": "0x06F3C323f0238c72BF35011071f2b5B7F43A054c",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17914260,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0xF1cac03319873169012621eF545fa33090217516",
+    "Token_0": "0x5A1De1f27bEb27C9FE4E0ecBf2Fe4E51fFf3d8d6",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 17958511,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0xdBF07F48cBC083b4cab2E3a34526Ca44A5dD61e9",
+    "Token_0": "0x92280039C27BbFCA9B7CdA45C14CDBE01Bf8b4b0",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 17969820,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xB59452FF65fAFF3fd7B15992aAA9253ab6774E5e",
+    "Token_0": "0x586a7cFE21E55ec0E24f0bfB118F77fE4cA87bab",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 17990443,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x4c45a8Fb807881214F38c6f091eCf64800f0d2E7",
+    "Token_0": "0x44709a920fCcF795fbC57BAA433cc3dd53C44DbE",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 17998515,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xD60A872163A6A9C7b157dA621768c8C065778432",
+    "Token_0": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 500,
+    "block": 18022023,
+    "tickSpacing": 10
+  },
+  {
+    "Pool": "0x135796322ED29933D71baA51e53b7a4bcFB5e4e6",
+    "Token_0": "0x6193123674B0585392294A610DD940fe08c29DFD",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 18023359,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xE29B9A718c683331515F304E91D3FE47662BD031",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xd27B128dc6536309CdebF7F1AFf0cB7717Bc0268",
+    "fee": 3000,
+    "block": 18035050,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x579c48da471D829f34339B97597114f92f302603",
+    "Token_0": "0x1fE24F25b1Cf609B9c4e7E12D802e3640dFA5e43",
+    "Token_1": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "fee": 10000,
+    "block": 18055513,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x4036A58e36822919a24Ca1C8705634b09CD8637b",
+    "Token_0": "0x2a2550e0A75aCec6D811AE3930732F7f3ad67588",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 100,
+    "block": 18273228,
+    "tickSpacing": 1
+  },
+  {
+    "Pool": "0x682dc5b13F935Af9791165c29bAA5a804b760547",
+    "Token_0": "0x06AAc5e9c582dF5fD70275AD4Fea6805206cCeab",
+    "Token_1": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+    "fee": 3000,
+    "block": 18301400,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x7ce04536279a74951c1a0148b5488d8A027A9bf8",
+    "Token_0": "0x419c4dB4B9e25d6Db2AD9691ccb832C8D9fDA05E",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 18315795,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xeb589Ae4a24C90eBcC7437084B022D347f6dBF7B",
+    "Token_0": "0xB62E45c3Df611dcE236A6Ddc7A493d79F9DFadEf",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 18320163,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x09f1ff2aD7a61b1B7e0192B6FC4A98b38Aa92556",
+    "Token_0": "0x3638c9e50437F00Ae53a649697F288ba68888cC1",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 18344564,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xf1418c077C63902DC152c8F551A4BF808fC99e22",
+    "Token_0": "0x78B039921E84E726EB72E7b1212bb35504c645cA",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 100,
+    "block": 18350798,
+    "tickSpacing": 1
+  },
+  {
+    "Pool": "0x92903C2b250F940aD164770316EE74FFdd5Ce5F9",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xfA3E941D1F6B7b10eD84A0C211bfA8aeE907965e",
+    "fee": 10000,
+    "block": 18351717,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xD6b39A8080906EAA65408038b07D87F49E704a86",
+    "Token_0": "0x83B4f3450F517FecBAF93c10Dad3DbECfAceD2a4",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 18352517,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x31D79a1350551C395bed2aB121401128D5D43005",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xfA3E941D1F6B7b10eD84A0C211bfA8aeE907965e",
+    "fee": 3000,
+    "block": 18355129,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x2b212e204359c2f49cDD6C754e293d88EdC4584F",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xe90AB0c4D0C3D971513c7852E5f67ec413E747c4",
+    "fee": 500,
+    "block": 18358423,
+    "tickSpacing": 10
+  },
+  {
+    "Pool": "0xA8bfd0630cbC816D05a7fccb5d17Ae592A4DCa6B",
+    "Token_0": "0x83B4f3450F517FecBAF93c10Dad3DbECfAceD2a4",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 18359332,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x84367A237f7ec3c79b1dca9c9843A728B4426b1A",
+    "Token_0": "0x4cCe605eD955295432958d8951D0B176C10720d5",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 18377006,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x1DB3B2fD4F0f9f1d55a1Cc5D33f5736D39ffb629",
+    "Token_0": "0x4cCe605eD955295432958d8951D0B176C10720d5",
+    "Token_1": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+    "fee": 3000,
+    "block": 18377215,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0xbA780D76B171F14B7e5Ff6994A41E1777C2deE35",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xD8912C10681D8B21Fd3742244f44658dBA12264E",
+    "fee": 3000,
+    "block": 18390284,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x622933C7c880392FaC548D7bB994Ec826043aDc4",
+    "Token_0": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "Token_1": "0xcAeF937aC9a63668460eFB0eA92b109BBA2fc1ED",
+    "fee": 3000,
+    "block": 18423507,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0xAFD99f6983546bdb450c1EBbB5Dd403551008eDf",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xF1376bceF0f78459C0Ed0ba5ddce976F1ddF51F4",
+    "fee": 500,
+    "block": 18424688,
+    "tickSpacing": 10
+  },
+  {
+    "Pool": "0x9B6f2B0BdD2c17a9CA01D8A8901aB2254ED22906",
+    "Token_0": "0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 18425940,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xB071335C2F64AaEba0fE4CA6989228b059E20e3b",
+    "Token_0": "0x94025780a1aB58868D9B2dBBB775f44b32e8E6e5",
+    "Token_1": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "fee": 3000,
+    "block": 18429502,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0xf18d3a3311907E7dA3498694104eaB1788Bdc0dd",
+    "Token_0": "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7",
+    "Token_1": "0xD533a949740bb3306d119CC777fa900bA034cd52",
+    "fee": 100,
+    "block": 18450819,
+    "tickSpacing": 1
+  },
+  {
+    "Pool": "0x3956A1164cB16d0c877c0886e9B7de3b12a1CDbB",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xF334dfc61EC055647543e5e35577c70789278079",
+    "fee": 10000,
+    "block": 18460924,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xf5137594b0666EF240EDeF9897E26a6CC438c632",
+    "Token_0": "0x1fE24F25b1Cf609B9c4e7E12D802e3640dFA5e43",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 500,
+    "block": 18467652,
+    "tickSpacing": 10
+  },
+  {
+    "Pool": "0xcB0590B77F9B3A8891f4bc429168c0696C9EF7e7",
+    "Token_0": "0xc944E90C64B2c07662A292be6244BDf05Cda44a7",
+    "Token_1": "0xE41d2489571d322189246DaFA5ebDe1F4699F498",
+    "fee": 10000,
+    "block": 18472043,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0xFb520F271da8bd8f3DB6f61fDEf3F900B462DEFE",
+    "Token_0": "0xa1faa113cbE53436Df28FF0aEe54275c13B40975",
+    "Token_1": "0xeEa3311250FE4c3268F8E684f7C87A82fF183Ec1",
+    "fee": 100,
+    "block": 18483288,
+    "tickSpacing": 1
+  },
+  {
+    "Pool": "0xB1B11f2c8Aa7da893cab7B6a981E5C9fc6a3DA3E",
+    "Token_0": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "Token_1": "0xe28e3E0331D09627F0ecc7aFc09326Af2fC8CDB5",
+    "fee": 3000,
+    "block": 18485185,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x828706d679065ae94668E659905cF4DE368e1cf3",
+    "Token_0": "0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39",
+    "Token_1": "0x46F6e9BbcCe8638b20EBBC83D33a2B5bfA9B7894",
+    "fee": 10000,
+    "block": 18486059,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x9b75A34A34971849208490dA2E9878de9b74b940",
+    "Token_0": "0x558a64E0652C3a4b7FA1fF9A589425bF42c9179D",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 18488183,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x1182283152C6B39b825c40671AA3e3B848AFe15E",
+    "Token_0": "0x427A03Fb96D9A94A6727fbcfbBA143444090dd64",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 18494093,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x73E36AC355bCFfB32788bFb3f806165256083685",
+    "Token_0": "0xba386A4Ca26B85FD057ab1Ef86e3DC7BdeB5ce70",
+    "Token_1": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+    "fee": 3000,
+    "block": 18509690,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x4c7814D5bd8C8184ad9D5E1688781f7fb5498aCB",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xfF20817765cB7f73d4bde2e66e067E58D11095C2",
+    "fee": 100,
+    "block": 18532170,
+    "tickSpacing": 1
+  },
+  {
+    "Pool": "0x23F12937456Fb34688d0f6aeB8C78429f60873A7",
+    "Token_0": "0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 18555744,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x769DB46F39C42ee7AD5f71F4167c47EdD281E767",
+    "Token_0": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 18561462,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x382234941986D74987511E40B2eaBc5CBcF60BdD",
+    "Token_0": "0x6a8C648C7635B50836285fD02ba5482d9526DEc0",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 18568566,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0xe6471e81b794Dc537b60A418A7Ce62990954Bb26",
+    "Token_0": "0x9fA76C696e12f0faCA9c32d6c0B433bc4BDf04Be",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 500,
+    "block": 18577148,
+    "tickSpacing": 10
+  },
+  {
+    "Pool": "0x31c079BC3C62d3BACBBEc1D14601a29DB0A10d68",
+    "Token_0": "0xD624E5C89466A15812c1D45Ce1533be1F16C1702",
+    "Token_1": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+    "fee": 3000,
+    "block": 18583079,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0xa493bbff30b1BF3d52653f92c9B131208253954b",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xCe391315b414D4c7555956120461D21808A69F3A",
+    "fee": 10000,
+    "block": 18654689,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x5718DEf5e263b5AE26f25D1bdd09ef2cDcDA3DfB",
+    "Token_0": "0x112b08621E27e10773ec95d250604a041f36C582",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 10000,
+    "block": 18663721,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x5ea523e496D049e2bA8B303C8D85C83FB6F285F8",
+    "Token_0": "0x1151CB3d861920e07a38e03eEAd12C32178567F6",
+    "Token_1": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+    "fee": 10000,
+    "block": 18739974,
+    "tickSpacing": 200
+  },
+  {
+    "Pool": "0x14D2d1912D52e13Ea3ae4A9C18885f5222c6e31c",
+    "Token_0": "0x3c37577f1DE12046AEa6975862559a50d8f50158",
+    "Token_1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "fee": 3000,
+    "block": 18781453,
+    "tickSpacing": 60
+  },
+  {
+    "Pool": "0x1Ef68d35B1a307AF5e8EA67d29CE511D89D8fAEa",
+    "Token_0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "Token_1": "0xEe7527841A932d2912224E20a405e1a1FF747084",
+    "fee": 10000,
+    "block": 18822181,
+    "tickSpacing": 200
+  }
+]
