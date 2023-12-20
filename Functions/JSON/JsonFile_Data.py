@@ -4,7 +4,7 @@ class JsonFile_Data(JsonFile):
 
     
     def __init__(self,JsonFile):
-        pass
+        super().__init__(JsonFile)
 
     
     def ReturnJsonAsPythonReadable(self) -> None:

@@ -10,7 +10,7 @@ class JsonFile_Data_ListePools(JsonFile_Data):
         pass
 
     
-    def ReturnJsonAsPythonReadable(self) -> None:
+    def ReturnJsonAsPythonReadable(self) -> dict:
         with open(self) as Json: 
             ABI = json.load(Json)
             return ABI

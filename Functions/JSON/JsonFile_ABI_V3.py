@@ -4,7 +4,8 @@ class JsonFile_ABI_V3(JsonFile_ABI):
 
     
     def __init__(self,JsonFile):
-        pass
+        super().__init__(JsonFile)
+
 
     
     def ReturnJsonAsPythonReadable(self) -> None:

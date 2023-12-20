@@ -7,7 +7,7 @@ from mysql.connector import Error
 
 class SQL_Pools(SQL_Init):
 
-    def __init__(self):
+    def __init__(self) -> None:
 
         SQL_Password = os.getenv('SQL_Password')
               
@@ -15,7 +15,7 @@ class SQL_Pools(SQL_Init):
 
         
 
-    def Update_Database(self,PoolsList,version):
+    def Update_Database(self,PoolsList,version) -> None:
         
         self._cursor = self._connexion.cursor()
 
@@ -49,7 +49,7 @@ class SQL_Pools(SQL_Init):
 
         super().CloseConnexion()
 
-    def Count(self):
+    def Count(self) -> int:
 
         cursor = self._connexion.cursor()
         nb=cursor.execute('SELECT COUNT(*) FROM PoolList')
@@ -58,7 +58,7 @@ class SQL_Pools(SQL_Init):
         super().CloseConnexion()
         return nb
     
-    def Update_Orphelin(self):
+    def Update_Orphelin(self) -> int:
 
         print("Updating Orphelins Pools Database...")
         cursor = self._connexion.cursor()
@@ -132,7 +132,7 @@ class SQL_Pools(SQL_Init):
         
         return result
     
-    def Update_Pools_Data(self,web3): #First time fetching all avaible pools refresh
+    def Update_Pools_Data(self,web3) -> None: #First time fetching all avaible pools refresh
 
         print("Updating Pools Data...")
         self._last_block = web3.eth.block_number #Even if some data will be updated with a block more recent we apply for all pools this value for block_last_refresh to save some api request

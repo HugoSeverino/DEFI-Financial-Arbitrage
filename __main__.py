@@ -7,14 +7,16 @@ from Functions.JSON import JsonFile_Data_ListePools
 from Functions.SQL import SQL_Pools,SQL_Init,SQL_Token
 
 
+
 # Load secret .env file
 load_dotenv()
 
 # Store credentials
 API_Keys = os.getenv('Infura_API')
 
-infura = f'https://mainnet.infura.io/v3/{API_Keys}' #Infura API
-
+API = os.getenv('Quicknode_API')
+infura = f'https://mainnet.infura.io/v3/{API_Keys}'  # Infura API
+#infura = f"https://misty-white-sea.quiknode.pro/{API}"
 #infura = 'http://localhost:8545' #ETH Local Node
 
 

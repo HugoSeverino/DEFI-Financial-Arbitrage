@@ -6,7 +6,7 @@ from mysql.connector import Error
 
 class SQL_Init(SQL):
 
-    def __init__(self):
+    def __init__(self) -> None:
 
         SQL_Password = os.getenv('SQL_Password')
                 
@@ -17,7 +17,7 @@ class SQL_Init(SQL):
         self.CreateTable()
         self.CloseConnexion()
 
-    def CreateDatabase(self):
+    def CreateDatabase(self) -> None:
 
         try:
             
@@ -39,7 +39,7 @@ class SQL_Init(SQL):
             else:
                 print(f"Error Creating Database: {e}")
     
-    def CreateTable(self):
+    def CreateTable(self) -> None:
     
         cursor = self._connexion.cursor()    
         cursor.execute('''CREATE TABLE IF NOT EXISTS PoolList (
@@ -74,7 +74,7 @@ class SQL_Init(SQL):
 
         #cursor.execute('''ALTER TABLE PoolList ADD CONSTRAINT FK_Token0 FOREIGN KEY (token0) REFERENCES TokenList(adrr); ALTER TABLE PoolList ADD CONSTRAINT FK_Token1 FOREIGN KEY (token1) REFERENCES TokenList(adrr);''', multi=True)
 
-    def CloseConnexion(self):
+    def CloseConnexion(self) -> None:
 
         if self._connexion.is_connected():
 

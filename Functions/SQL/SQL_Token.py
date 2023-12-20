@@ -7,7 +7,7 @@ from ..JSON import JsonFile_ABI
 
 class SQL_Token(SQL_Init):
 
-    def __init__(self):
+    def __init__(self) -> None:
 
         SQL_Password = os.getenv('SQL_Password')
               
@@ -15,7 +15,7 @@ class SQL_Token(SQL_Init):
 
         
 
-    def Update_Database(self,token0,token1):
+    def Update_Database(self,token0,token1) -> None:
         
         self._cursor = self._connexion.cursor()
 
@@ -32,7 +32,7 @@ class SQL_Token(SQL_Init):
                 print(f"Error Creating Database: {e}")
                 pass
     
-    def Count(self):
+    def Count(self) -> int:
     
         cursor = self._connexion.cursor()
         
@@ -42,7 +42,7 @@ class SQL_Token(SQL_Init):
         super().CloseConnexion()
         return nb
     
-    def Update_Orphelin(self):
+    def Update_Orphelin(self) -> None:
 
         print("Updating Tokens Orphelins Database...")
 
@@ -95,7 +95,7 @@ class SQL_Token(SQL_Init):
         
         return result
     
-    def Update_Error(self,web3):
+    def Update_Error(self,web3) -> None:
 
         print("Updating Tokens Errors Database...")
 
