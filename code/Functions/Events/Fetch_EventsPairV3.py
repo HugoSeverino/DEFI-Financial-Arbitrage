@@ -57,14 +57,16 @@ class Fetch_EventsPairV3(Generic[T],ABC):
     def IterateOverBlocks(self) -> None:
         toblock: int = 0
         latest_block_number: int = self._toblock
+        
         fromblock: int = self._fromblock
+        print(latest_block_number,fromblock)
+        while toblock < latest_block_number: #Slicing by 5k blocks to avoid Infura API limitation results
 
-        while toblock < latest_block_number: #Slicing by 50k blocks to avoid Infura API limitation of 10k results
-
-            if fromblock + 50000 > latest_block_number:
+            if fromblock + 60000 > latest_block_number:
                 toblock = latest_block_number
             else:
-                toblock = fromblock + 50000
+                toblock = fromblock + 60000
+            print(fromblock+1,toblock)    
             events: List[Dict[str, Any]] = list(self.fetch_events(self._event, from_block=fromblock+1,to_block=toblock))
             
             print('Got', len(events), 'events',"fromblock",fromblock+1,"toblock",toblock)
